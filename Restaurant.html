@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fictional Restaurant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 6px #000;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">The Food Place</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="text-center">
+    <h1 class="display-4">Delicious Meals Await</h1>
+    <button class="btn btn-primary btn-lg mt-3">Reserve a Table</button>
+  </div>
+</section>
+
+<!-- Menu Section -->
+<section class="container my-5">
+  <h2 class="mb-4 text-center">Our Menu</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1543352634-1a60d37a3b30?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Dish 1" />
+        <div class="card-body">
+          <h5 class="card-title">Spaghetti Carbonara</h5>
+          <p class="card-text">Classic Italian pasta with creamy sauce, pancetta, and parmesan.</p>
+          <p class="fw-bold">$12.99</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1555992336-cbf0d043e36f?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Dish 2" />
+        <div class="card-body">
+          <h5 class="card-title">Grilled Salmon</h5>
+          <p class="card-text">Fresh salmon grilled to perfection, served with lemon butter sauce.</p>
+          <p class="fw-bold">$18.50</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1571091718767-7f5f3c1a93cc?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Dish 3" />
+        <div class="card-body">
+          <h5 class="card-title">Caesar Salad</h5>
+          <p class="card-text">Crisp romaine lettuce with creamy Caesar dressing, croutons, and parmesan.</p>
+          <p class="fw-bold">$9.99</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded" alt="About Us" />
+    </div>
+    <div class="col-md-6">
+      <h2>About Us</h2>
+      <p>Welcome to The Food Place, where we serve authentic and mouth-watering dishes crafted with love and fresh ingredients. Our passion is to provide you with an unforgettable dining experience.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="container my-5">
+  <h2 class="mb-4 text-center">Contact Us</h2>
+  <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Your name" />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" rows="4" placeholder="Write your message here"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-1">&copy; 2025 The Food Place</p>
+  <div>
+    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i>Facebook</a>
+    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i>Twitter</a>
+    <a href="#" class="text-white"><i class="bi bi-instagram"></i>Instagram</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</body>
+</html>

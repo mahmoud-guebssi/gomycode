@@ -1,0 +1,33 @@
+Algorithm CountSentenceDetails
+    // Initialize counters
+    length <- 0
+    words <- 1           // Start at 1 because words are separated by spaces, so at least one word
+    vowels <- 0
+
+    Read ch             // Read the first character
+
+    WHILE ch != '.' DO
+        length <- length + 1
+
+        // Check if ch is a space, to count words
+        IF ch = ' ' THEN
+            words <- words + 1
+        END_IF
+
+        // Check if ch is a vowel (consider lowercase and uppercase)
+        IF ch = 'a' OR ch = 'e' OR ch = 'i' OR ch = 'o' OR ch = 'u' OR
+           ch = 'A' OR ch = 'E' OR ch = 'I' OR ch = 'O' OR ch = 'U' THEN
+            vowels <- vowels + 1
+        END_IF
+
+        Read ch         // Read next character
+    END_WHILE
+
+    // Add the period to the length
+    length <- length + 1
+
+    // Output results
+    Write("Length of sentence: ", length)
+    Write("Number of words: ", words)
+    Write("Number of vowels: ", vowels)
+EndAlgorithm

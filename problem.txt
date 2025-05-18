@@ -1,0 +1,65 @@
+//Problem 1
+ALGORITHM sum_distinct_elements
+VAR
+    set1 : ARRAY[0..m-1] OF INTEGER
+    set2 : ARRAY[0..n-1] OF INTEGER
+    sum : INTEGER := 0
+    i, j : INTEGER
+    found : BOOLEAN
+
+BEGIN
+    sum := 0
+
+    // Add elements from set1 that are NOT in set2
+    FOR i FROM 0 TO m-1 DO
+        found := FALSE
+        FOR j FROM 0 TO n-1 DO
+            IF set1[i] = set2[j] THEN
+                found := TRUE
+                BREAK
+            END_IF
+        END_FOR
+        IF NOT found THEN
+            sum := sum + set1[i]
+        END_IF
+    END_FOR
+
+    // Add elements from set2 that are NOT in set1
+    FOR i FROM 0 TO n-1 DO
+        found := FALSE
+        FOR j FROM 0 TO m-1 DO
+            IF set2[i] = set1[j] THEN
+                found := TRUE
+                BREAK
+            END_IF
+        END_FOR
+        IF NOT found THEN
+            sum := sum + set2[i]
+        END_IF
+    END_FOR
+
+    Write("Sum of distinct elements is: ", sum)
+END
+
+//Problem 2
+ALGORITHM check_orthogonal_vectors
+VAR
+    n : INTEGER   // number of pairs
+    v1, v2 : ARRAY OF REAL
+    ps : REAL
+    i, j : INTEGER
+    orthogonal : BOOLEAN
+
+BEGIN
+    FOR i FROM 1 TO n DO
+        // Assume v1 and v2 are given or input for each pair of size n
+        dot_product(v1, v2, n, ps)
+
+        IF ps = 0 THEN
+            Write("Vectors ", i, " are orthogonal")
+        ELSE
+            Write("Vectors ", i, " are NOT orthogonal")
+        END_IF
+    END_FOR
+END
+
